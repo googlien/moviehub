@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Login Form | CodingLab</title> -->
+    <link rel="stylesheet" href="movie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>MOVIE HUB</span></div>
+        <form action="#">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Email or Phone" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required>
+          </div>
+          <div class="pass"><a href="#">Forgot password?</a></div>
+          <div class="row button">
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+        </form>
+      </div>
+    </div>
+ 
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+
+<!--script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script-->
+
+<script>
+    //               import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js">
+  
+    // Your web app's Firebase configuration
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+      apiKey: "AIzaSyAgWdlMjPe-Y2GOFt0epvVWr--OvxcGBY4",
+      authDomain: "moviehubg0.firebaseapp.com",
+      databaseURL: "https://moviehubg0-default-rtdb.firebaseio.com",
+      projectId: "moviehubg0",
+      storageBucket: "moviehubg0.appspot.com",
+      messagingSenderId: "848066542955",
+      appId: "1:848066542955:web:b8bb3826cbd13b7d71602e",
+      measurementId: "G-Y1KLF0DCQ7"
+};
+   // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    //the most importan line to upload data in real time   
+    firebase.database().goOnline()
+
+ </script>
+
+ 
+  <script src="movie.js"></script>
+
+  </body>
+</html>
